@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: a11ab950e7527494c878dedb5dd55fcc
+=======
+<<<<<<< HEAD:Ballista Project/Assets/AI and Physics.meta
+guid: 95721ef98d420eb49873e0e0074bb356
+=======
+guid: a11ab950e7527494c878dedb5dd55fcc
+>>>>>>> Jacob:Ballista Project/Assets/Main.meta
+>>>>>>> Jacob
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
