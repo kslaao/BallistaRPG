@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 32667507}
   - component: {fileID: 32667506}
   m_Layer: 0
-  m_Name: Cube (6)
+  m_Name: AIBlocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 75700632}
   - component: {fileID: 75700631}
   m_Layer: 0
-  m_Name: Floor
+  m_Name: FloorAI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -400,7 +400,7 @@ GameObject:
   - component: {fileID: 134343392}
   - component: {fileID: 134343391}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: AIBlocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
@@ -493,7 +493,7 @@ GameObject:
   - component: {fileID: 286968824}
   - component: {fileID: 286968823}
   m_Layer: 0
-  m_Name: Cube (5)
+  m_Name: AIBlocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
@@ -665,7 +665,7 @@ GameObject:
   - component: {fileID: 300788393}
   - component: {fileID: 300788392}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: AIBlocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
@@ -837,7 +837,7 @@ GameObject:
   - component: {fileID: 576267404}
   - component: {fileID: 576267403}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: AIPath3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -910,12 +910,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 576267402}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 13.71, y: 1.02, z: -12.86}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 4.7770157, y: 5.8654838, z: -5.9077196}
   m_LocalScale: {x: 14.428043, y: 1, z: 3.6678}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 774054263}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -1009,6 +1009,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50.000004, y: -58.198, z: 0}
+--- !u!1 &774054262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 774054263}
+  m_Layer: 0
+  m_Name: Scene Stuff
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &774054263
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774054262}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.932984, y: -4.845484, z: -6.95228}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1602733177}
+  - {fileID: 2061147744}
+  - {fileID: 576267406}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &829272215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,7 +1055,7 @@ GameObject:
   - component: {fileID: 829272218}
   - component: {fileID: 829272217}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: AIBlocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
@@ -1431,7 +1464,7 @@ GameObject:
   - component: {fileID: 1203914339}
   - component: {fileID: 1203914338}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: AIBlocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
@@ -1524,7 +1557,7 @@ GameObject:
   - component: {fileID: 1376535982}
   - component: {fileID: 1376535981}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: AIBlocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
@@ -1748,7 +1781,7 @@ PrefabInstance:
     - target: {fileID: 3734507811803204442, guid: 868d96a733c04164eba4fbb7302493ed,
         type: 3}
       propertyPath: m_Name
-      value: Player
+      value: PlayerAI
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 868d96a733c04164eba4fbb7302493ed, type: 3}
@@ -1777,7 +1810,7 @@ GameObject:
   - component: {fileID: 1602733175}
   - component: {fileID: 1602733174}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: AIPath1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1851,11 +1884,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602733173}
   m_LocalRotation: {x: -0, y: -0, z: 0.13036531, w: 0.9914661}
-  m_LocalPosition: {x: 2.2796428, y: 0.18, z: -7.56}
-  m_LocalScale: {x: 6.6403, y: 1, z: 2.45992}
+  m_LocalPosition: {x: -6.6533413, y: 5.0254836, z: -0.6077199}
+  m_LocalScale: {x: 6.6403003, y: 1, z: 2.45992}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 774054263}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 14.981001}
 --- !u!1 &1810250768
 GameObject:
@@ -2027,7 +2060,7 @@ GameObject:
   - component: {fileID: 1891328513}
   - component: {fileID: 1891328512}
   m_Layer: 0
-  m_Name: Terrain
+  m_Name: TerrainAI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2042,7 +2075,7 @@ TerrainCollider:
   m_GameObject: {fileID: 1891328511}
   m_Material: {fileID: 0}
   m_Enabled: 1
-  m_TerrainData: {fileID: 15600000, guid: b62b4cb288f66524596e7bb660b0e120, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: 7df7090eb2eb87844a93056d6e4531ab, type: 2}
   m_EnableTreeColliders: 1
 --- !u!218 &1891328513
 Terrain:
@@ -2089,7 +2122,7 @@ Transform:
   m_LocalScale: {x: 1.1617, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2061147740
 GameObject:
@@ -2104,7 +2137,7 @@ GameObject:
   - component: {fileID: 2061147742}
   - component: {fileID: 2061147741}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: AIPath2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2177,12 +2210,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2061147740}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.66, y: 1.02, z: -7.56}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.2729845, y: 5.8654838, z: -0.6077199}
   m_LocalScale: {x: 6.6403, y: 1, z: 3.6678}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 774054263}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7548601640551717410
 PrefabInstance:
@@ -2194,7 +2227,7 @@ PrefabInstance:
     - target: {fileID: 7548601641218771225, guid: 038ca88c2dfa0a94fa22bba10ca52ec2,
         type: 3}
       propertyPath: m_Name
-      value: Enemy
+      value: EnemyAI
       objectReference: {fileID: 0}
     - target: {fileID: 7548601641218771230, guid: 038ca88c2dfa0a94fa22bba10ca52ec2,
         type: 3}
