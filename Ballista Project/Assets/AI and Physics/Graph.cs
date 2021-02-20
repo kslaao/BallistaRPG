@@ -77,7 +77,8 @@ public class Graph : MonoBehaviour
             if (timer > 3)
             {
                 timer = 0;
-                i = UnityEngine.Random.Range(0, nodes.Length);
+                i++;
+                //i = UnityEngine.Random.Range(0, nodes.Length);
             }
             if (i < nodes.Length)
             {
@@ -86,6 +87,11 @@ public class Graph : MonoBehaviour
         }
         else
         {
+            AIplayer.transform.position = Vector3.MoveTowards(AIplayer.transform.position, nodes[i].transform.position, 3.0f * Time.deltaTime);
+        }
+        if (i == nodes.Length)
+        {
+            i = 0;
             AIplayer.transform.position = Vector3.MoveTowards(AIplayer.transform.position, nodes[i].transform.position, 3.0f * Time.deltaTime);
         }
     }
