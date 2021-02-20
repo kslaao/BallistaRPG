@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-public class Graph : MonoBehaviour
+public class Nodes : MonoBehaviour
 {
 
     public GameObject[] nodes;
@@ -11,12 +12,16 @@ public class Graph : MonoBehaviour
     List<Vector3> links;
     List<Vector3> fromposition;
 
-    public GameObject AIplayer;
+    public GameObject[] NPCs;
+    //public GameObject AIplayer;
     public int i;
-    public bool linedrawn;
 
     void Start()
     {
+        //
+        nodes = GameObject.FindGameObjectsWithTag("Nodes");
+        NPCs = GameObject.FindGameObjectsWithTag("NPC");
+        //
         int elements = this.transform.childCount;
         nodes = new GameObject[elements];
 
@@ -59,15 +64,48 @@ public class Graph : MonoBehaviour
                 }
             }
         }
-
-        i = Random.Range(0, nodes.Length);
+        //i = Random.Range(0, nodes.Length);
     }
 
-    public float timer;
+    /*public float timer;
 
     private void Moving()
     {
-        float distancetopoints = Vector3.Distance(nodes[i].transform.position, AIplayer.transform.position);
+
+        foreach (GameObject NPC in NPCs)
+        {
+            float distancetopoints = Vector3.Distance(nodes[i].transform.position, NPC.transform.position);
+
+            if (distancetopoints < 0.5f)
+            {
+                timer += Time.deltaTime;
+                if (timer > 3)
+                {
+                    i = UnityEngine.Random.Range(0, nodes.Length);
+                    timer = 0;
+                }
+                if (i < nodes.Length)
+                {
+                    NPC.transform.position = Vector3.MoveTowards(NPC.transform.position, nodes[i].transform.position, 3.0f * Time.deltaTime);
+                }
+            }
+            else
+            {
+                NPC.transform.position = Vector3.MoveTowards(NPC.transform.position, nodes[i].transform.position, 3.0f * Time.deltaTime);
+            }
+            if (i == nodes.Length)
+            {
+                i = 0;
+                NPC.transform.position = Vector3.MoveTowards(NPC.transform.position, nodes[i].transform.position, 3.0f * Time.deltaTime);
+            }
+
+            Vector3 NPCPos = NPC.transform.position;
+            float posX = NPCPos.x;
+            float posY = NPCPos.y;
+            NPC.transform.position = Vector3.MoveTowards(NPC.transform.position, nodes[i].transform.position, 3.0f * Time.deltaTime);
+        }
+
+        /*float distancetopoints = Vector3.Distance(nodes[i].transform.position, AIplayer.transform.position);
 
         AIplayer.transform.position = Vector3.MoveTowards(AIplayer.transform.position, nodes[i].transform.position, 3.0f * Time.deltaTime);
 
@@ -94,7 +132,7 @@ public class Graph : MonoBehaviour
             i = 0;
             AIplayer.transform.position = Vector3.MoveTowards(AIplayer.transform.position, nodes[i].transform.position, 3.0f * Time.deltaTime);
         }
-    }
+    }*/
 
     void Update()
     {
@@ -105,6 +143,6 @@ public class Graph : MonoBehaviour
             j++;
         }
 
-        Moving();
+        //Moving();
     }
 }
