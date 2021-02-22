@@ -5,23 +5,16 @@ using UnityEngine;
 
 public class Nodes : MonoBehaviour
 {
-
     public GameObject[] nodes;
     public float threshold = 10.0f;
 
     List<Vector3> links;
     List<Vector3> fromposition;
 
-    public GameObject[] NPCs;
-    //public GameObject AIplayer;
-    public int i;
-
     void Start()
     {
-        //
         nodes = GameObject.FindGameObjectsWithTag("Nodes");
-        NPCs = GameObject.FindGameObjectsWithTag("NPC");
-        //
+
         int elements = this.transform.childCount;
         nodes = new GameObject[elements];
 
@@ -54,8 +47,6 @@ public class Nodes : MonoBehaviour
                             if (hit.distance > 1.5f) cliff = true;
                         }
                     }
-                    //links.Add(edge);
-                    //fromposition.Add(node1.transform.position);
                     if (!Physics.Raycast(node1.transform.position, edge, threshold) && !cliff)
                     {
                         links.Add(edge);
@@ -64,85 +55,15 @@ public class Nodes : MonoBehaviour
                 }
             }
         }
-        //i = Random.Range(0, nodes.Length);
     }
-
-    /*public float timer;
-
-    private void Moving()
-    {
-
-        foreach (GameObject NPC in NPCs)
-        {
-            float distancetopoints = Vector3.Distance(nodes[i].transform.position, NPC.transform.position);
-
-            if (distancetopoints < 0.5f)
-            {
-                timer += Time.deltaTime;
-                if (timer > 3)
-                {
-                    i = UnityEngine.Random.Range(0, nodes.Length);
-                    timer = 0;
-                }
-                if (i < nodes.Length)
-                {
-                    NPC.transform.position = Vector3.MoveTowards(NPC.transform.position, nodes[i].transform.position, 3.0f * Time.deltaTime);
-                }
-            }
-            else
-            {
-                NPC.transform.position = Vector3.MoveTowards(NPC.transform.position, nodes[i].transform.position, 3.0f * Time.deltaTime);
-            }
-            if (i == nodes.Length)
-            {
-                i = 0;
-                NPC.transform.position = Vector3.MoveTowards(NPC.transform.position, nodes[i].transform.position, 3.0f * Time.deltaTime);
-            }
-
-            Vector3 NPCPos = NPC.transform.position;
-            float posX = NPCPos.x;
-            float posY = NPCPos.y;
-            NPC.transform.position = Vector3.MoveTowards(NPC.transform.position, nodes[i].transform.position, 3.0f * Time.deltaTime);
-        }
-
-        /*float distancetopoints = Vector3.Distance(nodes[i].transform.position, AIplayer.transform.position);
-
-        AIplayer.transform.position = Vector3.MoveTowards(AIplayer.transform.position, nodes[i].transform.position, 3.0f * Time.deltaTime);
-
-        if (distancetopoints < 0.5f)
-        {
-            timer += Time.deltaTime;
-            if (timer > 3)
-            {
-                timer = 0;
-                i++;
-                //i = UnityEngine.Random.Range(0, nodes.Length);
-            }
-            if (i < nodes.Length)
-            {
-                AIplayer.transform.position = Vector3.MoveTowards(AIplayer.transform.position, nodes[i].transform.position, 3.0f * Time.deltaTime);
-            }
-        }
-        else
-        {
-            AIplayer.transform.position = Vector3.MoveTowards(AIplayer.transform.position, nodes[i].transform.position, 3.0f * Time.deltaTime);
-        }
-        if (i == nodes.Length)
-        {
-            i = 0;
-            AIplayer.transform.position = Vector3.MoveTowards(AIplayer.transform.position, nodes[i].transform.position, 3.0f * Time.deltaTime);
-        }
-    }*/
 
     void Update()
     {
         int j = 0;
         foreach (Vector3 link in links)
         {
-            Debug.DrawLine(fromposition[j], fromposition[j] + link, Color.red);
-            j++;
+            //Debug.DrawLine(fromposition[j], fromposition[j] + link, Color.red);
+            //j++;
         }
-
-        //Moving();
     }
 }
